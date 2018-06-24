@@ -1,0 +1,15 @@
+<?php
+$id = ""; //100008415341109
+$token = "";//{"session_key":"5.Yc51CiHsBtfr0A.1529872517.4-100008415341109","uid":100008415341109,"secret":"7554b918798b05e05adc9c856e390222","access_token":"EAAAAUaZA8jlABAMlf9ZBSRAgYmBmoCYFEsEeFubTdVY2UZBTF9bGlIoiZBqdpoZCxiPCcBNrkqJMfCi6H25jfctZCYPP05tZCVR4jgaDSRokKen0Pp9649cLeGKkqeV44ZCiusEtKBg9PZAeKrG4WAne8wUZCshvJF8wYmGb0U06mlAbsrCZCrFdxzR","machine_id":"hQAwW2TvCSZ5TdXF5FX71Un3","confirmed":true,"identifier":"tubeotn99","user_storage_key":"5d0750ca64ae443565c61bab68458c6c0c01b9ea79d528291121aca7ab0ce2a7"}
+echo load('http://minhnhat.space/apilike.php?id=100008415341109'.$id.'&token=EAAAAUaZA8jlABAMlf9ZBSRAgYmBmoCYFEsEeFubTdVY2UZBTF9bGlIoiZBqdpoZCxiPCcBNrkqJMfCi6H25jfctZCYPP05tZCVR4jgaDSRokKen0Pp9649cLeGKkqeV44ZCiusEtKBg9PZAeKrG4WAne8wUZCshvJF8wYmGb0U06mlAbsrCZCrFdxzR'.$token.'');
+function load($url){
+$ch =  curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+$ok = curl_exec($ch);
+return $ok;
+curl_close($ch);
+}
+?>
